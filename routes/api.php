@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\orderController;
+use App\Http\Controllers\API\orderItemController;
 use App\Http\Controllers\API\produkController;
 use App\Http\Controllers\tesController;
 use Illuminate\Http\Request;
@@ -23,3 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/tesproduk', [produkController::class, 'index']);
 Route::get('/detailProduk/{id}', [produkController::class, 'detailProduct']);
 Route::get('/kategoriProduk/{id}', [kategoriController::class, 'kategoriProduct']);
+
+Route::post('/orders', [orderController::class,'store']);
+Route::post('/orderItem', [orderItemController::class,'store']);
+Route::get('/filterOrder/{bulan}', [orderController::class,'filterMonth']);
+

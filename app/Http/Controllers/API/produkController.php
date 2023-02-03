@@ -17,8 +17,4 @@ class produkController extends Controller
         $data = Product::with('stock', 'kategori')->find($request-> id);
         return response()->json(['data'=>$data], 200);
     }
-
-    public function a(){
-        
-    }
 }
