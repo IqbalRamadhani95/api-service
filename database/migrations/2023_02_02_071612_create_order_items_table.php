@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('product_id');
             $table->foreignId('order_id');
-            $table->string('qty');
-            $table->string('total_harga');
+            $table->integer('qty');
+            $table->integer('total_harga');
             $table->timestamps();
         });
     }
