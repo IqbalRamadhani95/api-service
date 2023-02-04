@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\orderController;
 use App\Http\Controllers\API\orderItemController;
 use App\Http\Controllers\API\produkController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\tesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,12 @@ Route::get('/kategoriProduk/{id}', [kategoriController::class, 'kategoriProduct'
 Route::post('/orders', [orderController::class,'store']);
 Route::post('/orderItem', [orderItemController::class,'store']);
 Route::get('/filterOrder/{bulan}', [orderController::class,'filterMonth']);
+
+Route::controller(AuthController::class)->group(function() {
+    Route::post('login', 'login');
+    Route::post('register', 'register');
+    Route::post('logout', 'logout');
+    Route::post('refresh', 'refresh');
+    Route::get('me', 'me');
+});
 
