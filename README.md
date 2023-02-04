@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## install
+- clone project
+- jalankan composer install pada terminal
+- jalankan php artisan migrate --seed 
+
 ## endpoint (tes menggunakan postman)
 
 - menampilkan data produk : localhost:8000/api/tesproduk
