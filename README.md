@@ -6,17 +6,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
 ## endpoint (tes menggunakan postman)
--menampilkan data produk : localhost:8000/api/tesproduk
--menambah data produk : localhost:8000/api/insertproduk
--menampilkan detail produk serta stok : localhost:8000/api/tesproduk/{id}
--menampilkan data produk sesuai kategori : localhost:8000/api/kategoriProduk/{id}
--menambah data penjualan(order) : localhost:8000/api/orders
--menambah data penjualan(orderItem) : localhost:8000/api/orderItem
--menambah data penjualan sesuai : localhost:8000/api/filterOrder/{bulan ke berapa/angka}
--melakukan register : localhost:8000/api/register
--melakukan login : localhost:8000/api/login
--melakukan logout : localhost:8000/api/logout
+
+- menampilkan data produk : localhost:8000/api/tesproduk
+- menambah data produk : localhost:8000/api/insertproduk
+- menampilkan detail produk serta stok : localhost:8000/api/tesproduk/{id}
+- menampilkan data produk sesuai kategori : localhost:8000/api/kategoriProduk/{id}
+- menambah data penjualan(order) : localhost:8000/api/orders
+- menambah data penjualan(orderItem) : localhost:8000/api/orderItem
+- menambah data penjualan sesuai : localhost:8000/api/filterOrder/{bulan ke berapa/angka}
+- melakukan register : localhost:8000/api/register
+- melakukan login : localhost:8000/api/login
+- melakukan logout : localhost:8000/api/logout
 
 ## About Laravel
 
