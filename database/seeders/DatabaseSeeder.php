@@ -20,16 +20,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(5)->create();
+        // User::factory(5)->create();
         Product::factory(3)->create();
         Kategori::factory(3)->create();
         Stock::factory(3)->create();
         Order::factory(5)->create();
         OrderItem::factory(5)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory()->create([
+            'name' => 'budi',
+            'email' => 'budi@gmail.com',
+            'email_verified_at' => now(),
+            'password' => '123456', // password
+        ]);
+
+        User::factory()->create([
+            'name' => 'andi',
+            'email' => 'andi@gmail.com',
+            'email_verified_at' => now(),
+            'password' => '123456', // password
+        ]);
     }
 }

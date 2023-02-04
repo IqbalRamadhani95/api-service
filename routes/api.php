@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\kategoriController;
 use App\Http\Controllers\API\orderController;
 use App\Http\Controllers\API\orderItemController;
 use App\Http\Controllers\API\produkController;
@@ -24,6 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/tesproduk', [produkController::class, 'index']);
+Route::post('/insertproduk', [produkController::class, 'store']);
 Route::get('/detailProduk/{id}', [produkController::class, 'detailProduct']);
 Route::get('/kategoriProduk/{id}', [kategoriController::class, 'kategoriProduct']);
 

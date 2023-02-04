@@ -13,6 +13,17 @@ class produkController extends Controller
         return response()->json(['data'=>$data], 200);
     }
 
+    public function store(Request $request){
+        $product = Product::create([
+            'kategori_id' => $request->kategori_id,
+            'tahun_keluaran' => $request->tahun_keluaran,
+            'warna' => $request->warna,
+            'harga' => $request->harga
+        ]);
+
+        return response()->json(['data'=>$product], 200);
+    }
+
     public function detailProduct(Request $request){
         $data = Product::with('stock', 'kategori')->find($request-> id);
         return response()->json(['data'=>$data], 200);
